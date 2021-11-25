@@ -1,0 +1,30 @@
+{
+  "name": "craftlink",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.1",
+    "hardhat": "^2.7.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcup1/Craftlink.git"
+  },
+  "keywords": [
+    "craftlink"
+  ],
+  "author": "Jakub Chmiel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcup1/Craftlink/issues"
+  },
+  "homepage": "https://github.com/jcup1/Craftlink#readme"
+}
