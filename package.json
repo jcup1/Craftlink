@@ -6,13 +6,23 @@
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "@types/node": "16.11.10",
+    "@types/react": "17.0.37",
     "chai": "^4.3.4",
+    "eslint": "7.32.0",
+    "eslint-config-next": "12.0.4",
     "ethereum-waffle": "^3.4.0",
-    "ethers": "^5.5.1",
-    "hardhat": "^2.7.0"
+    "hardhat": "^2.7.0",
+    "typescript": "4.5.2",
+    "web3": "^1.6.1"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "repository": {
     "type": "git",
@@ -29,6 +39,9 @@
   "homepage": "https://github.com/jcup1/Craftlink#readme",
   "dependencies": {
     "@openzeppelin/cli": "^2.8.2",
-    "@openzeppelin/contracts": "^4.3.3"
+    "@openzeppelin/contracts": "^4.3.3",
+    "next": "12.0.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   }
 }
