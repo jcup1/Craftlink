@@ -2,6 +2,7 @@
 myproject
 
 /node_modules
+artifacts
 /.idea
 *.tsbuildinfo
 
@@ -90,3 +91,5 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+.openzeppelin/.session

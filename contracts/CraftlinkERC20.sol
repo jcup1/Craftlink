@@ -1,52 +1,17 @@
 //SPDX-License-Identifier: AGPL-3.0-or-later
 pragma solidity ^0.8.4;
 
-contract CraftlinkERC20 {
-    string  public name = "Craftlink";
-    string  public symbol = "CLK";
-    uint8   public decimals = 18;
-    uint256 public totalSupply = 1000*1000; // 1 million tokens
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-    mapping(address => uint256) public balanceOf;
-    mapping(address => mapping(address => uint256)) public allowance;
+contract CraftlinkERC20 is ERC20, Ownable {
 
-    event Approval(
-        address indexed _owner,
-        address indexed _spender,
-        uint256 _value
-    );
-
-    event Transfer(
-        address indexed _from,
-        address indexed _to,
-        uint256 _value
-    );
-
-    constructor() {
-        balanceOf[msg.sender] = totalSupply;
+    constructor(string memory _name, string memory _symbol) ERC20(_name, _symbol) {
+        _mint(msg.sender, 1000000);
     }
 
-    function transfer(address _to, uint256 _value) public returns (bool success) {
-        require(balanceOf[msg.sender] >= _value);
-        balanceOf[msg.sender] -= _value;
-        balanceOf[_to] += _value;
-        emit Transfer(msg.sender, _to, _value);
-        return true;
+    function mint(address receiver, uint256 amount) public onlyOwner {
+        _mint(receiver, amount);
     }
 
-    function approve(address _spender, uint256 _value) public returns (bool success) {
-        allowance[msg.sender][_spender] = _value;
-        emit Approval(msg.sender, _spender, _value);
-        return true;
-    }
-
-    function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
-        require(_value <= balanceOf[_from]);
-        require(_value <= allowance[_from][msg.sender]);
-        balanceOf[_from] -= _value;
-        balanceOf[_to] += _value;
-        allowance[_from][msg.sender] -= _value;
-        emit Transfer(_from, _to, _value);
-        return true;
-    }
 }
