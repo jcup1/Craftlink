@@ -26,5 +26,9 @@
   "bugs": {
     "url": "https://github.com/jcup1/Craftlink/issues"
   },
-  "homepage": "https://github.com/jcup1/Craftlink#readme"
+  "homepage": "https://github.com/jcup1/Craftlink#readme",
+  "dependencies": {
+    "@openzeppelin/cli": "^2.8.2",
+    "@openzeppelin/contracts": "^4.3.3"
+  }
 }

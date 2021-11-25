@@ -15,7 +15,7 @@ async function main() {
 
   
   const CraftlinkERC20 = await hre.ethers.getContractFactory("CraftlinkERC20");
-  const craftlinkERC20 = await CraftlinkERC20.deploy();
+  const craftlinkERC20 = await CraftlinkERC20.deploy("Craftlink", "CLK");
 
   await craftlinkERC20.deployed();
 
