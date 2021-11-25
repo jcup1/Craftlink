@@ -3,6 +3,7 @@ myproject
 
 /node_modules
 artifacts
+cache
 /.idea
 *.tsbuildinfo
 
